@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ApexICT - Premium Enterprise ICT Training, Vendor Certifications, Corporate Workforce Solutions, and IT Talent Recruitment.">
+    <meta name="keywords" content="ICT Training, IT Certification, Microsoft Azure, AWS, Cisco CCNA, CompTIA, Corporate Training, IT Learnerships, Tech Recruitment">
+    <title>ApexICT | Enterprise ICT Training, Certifications & Talent Platform</title>
+
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0b132b',
+                            950: '#050914',
+                        },
+                        brand: {
+                            blue: '#2563eb',
+                            cyan: '#0ea5e9',
+                            dark: '#1e293b',
+                            accent: '#38bdf8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured JSON-LD Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "ApexICT Enterprise Learning",
+      "url": "https://apexict.example.com",
+      "description": "Authorized Provider of Enterprise ICT Training, International Vendor Certifications, and Talent Solutions.",
+      "sameAs": [
+        "https://linkedin.com/company/apexict-learning"
+      ]
+    }
+    </script>
+
+    <!-- Custom CSS Styles & Utilities -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .mega-menu-shadow {
+            box-shadow: 0 20px 25px -5px rgba(11, 19, 43, 0.12), 0 8px 10px -6px rgba(11, 19, 43, 0.08);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .path-line {
+            stroke-dasharray: 6;
+            animation: dash 30s linear infinite;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 1000;
+            }
+        }
+
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .focus-visible-outline:focus-visible {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-blue selection:text-white">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-brand-blue font-semibold shadow-lg">
+        Skip to main content
+    </a>
+
+    <!-- GLOBAL TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-3 pointer-events-none max-w-md w-full px-4"></div>
+
+    <header class="sticky top-0 z-40 w-full bg-navy-950/95 backdrop-blur-md text-white border-b border-slate-800 transition-all duration-200">
+        <!-- Top Utility Bar -->
+        <div class="hidden lg:block border-b border-slate-800/60 bg-navy-950 text-xs text-slate-400 py-1.5 px-6">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM3 13a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zM3 21a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2z"></path></svg>
+                        Official Vendor Authorized Partner &amp; Testing Network
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        NQF Accredited Learnerships &amp; Workforce Development
+                    </span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:text-white transition-colors">Support &amp; Locations</a>
+                    <a href="#schedules" class="hover:text-white transition-colors">Exam Booking Notice</a>
+                    <div class="flex items-center gap-2 border-l border-slate-800 pl-4 text-slate-300">
+                        <a href="#dashboard" class="hover:text-brand-cyan flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                            Portal Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Desktop Navigation Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 focus-visible-outline rounded-lg p-1">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-cyan flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-brand-blue/30">
+                    A
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white block leading-none">APEX<span class="text-brand-cyan">ICT</span></span>
+                    <span class="text-[10px] font-medium tracking-widest text-slate-400 uppercase block mt-1">Enterprise Learning</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+                <!-- Courses Dropdown Trigger -->
+                <div class="relative group">
+                    <a href="#courses" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all flex items-center gap-1">
+                        Courses
+                        <svg class="w-4 h-4 text-slate-400 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <!-- Mega Menu: Courses -->
+                    <div class="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-[640px] z-50 pointer-events-none group-hover:pointer-events-auto">
+                        <div class="bg-navy-900 border border-slate-800 rounded-2xl mega-menu-shadow p-6 text-slate-200 grid grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-xs font-semibold text-brand-cyan uppercase tracking-wider mb-3">Popular Domains</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#courses?category=Cloud" class="hover:text-brand-cyan transition-colors block py-1">Cloud Architecture &amp; Virtualization</a></li>
+                                    <li><a href="#courses?category=Cybersecurity" class="hover:text-brand-cyan transition-colors block py-1">Cybersecurity &amp; Threat Defense</a></li>
+                                    <li><a href="#courses?category=Networking" class="hover:text-brand-cyan transition-colors block py-1">Enterprise Networking &amp; Cisco</a></li>
+                                    <li><a href="#courses?category=Data" class="hover:text-brand-cyan transition-colors block py-1">Data Engineering &amp; AI Analytics</a></li>
+                                    <li><a href="#courses?category=DevOps" class="hover:text-brand-cyan transition-colors block py-1">DevOps, Automation &amp; Linux</a></li>
+                                </ul>
+                            </div>
+                            <div class="bg-navy-950/60 p-4 rounded-xl border border-slate-800/80">
+                                <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Featured Curriculum</h3>
+                                <p class="text-xs text-slate-300 mb-3">Azure Solutions Architect AZ-305 &amp; AWS Certified Solutions Architect Associate tracks starting this month.</p>
+                                <a href="#courses" class="inline-flex items-center text-xs font-semibold text-brand-cyan hover:underline gap-1">
+                                    Browse All 120+ Courses &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#certifications" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all">Certifications</a>
+                <a href="#pathways" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all">Pathways</a>
+                <a href="#schedules" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all">Schedules</a>
+                <a href="#corporate" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all">Corporate Training</a>
+                <a href="#talent" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all">Talent &amp; Careers</a>
+                <a href="#learnerships" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all">Learnerships</a>
+                <a href="#exams" class="px-3.5 py-2 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800/60 transition-all">Exam Centre</a>
+            </nav>
+
+            <!-- Actions Right -->
+            <div class="flex items-center gap-3">
+                <button id="search-trigger" aria-label="Open global search" class="p-2.5 rounded-xl bg-slate-800/70 hover:bg-slate-800 text-slate-300 hover:text-white transition-all focus-visible-outline">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </button>
+
+                <a href="#quote" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-semibold text-sm shadow-md shadow-brand-blue/20 transition-all focus-visible-outline">
+                    Request a Quote
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" class="lg:hidden p-2.5 rounded-xl bg-slate-800/70 text-slate-300 hover:text-white focus-visible-outline">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-drawer" class="lg:hidden hidden fixed inset-0 z-50 bg-navy-950/95 backdrop-blur-xl text-white overflow-y-auto">
+            <div class="p-6 flex flex-col h-full">
+                <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                    <a href="#home" class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-blue flex items-center justify-center font-bold text-white">A</div>
+                        <span class="text-lg font-bold">APEX<span class="text-brand-cyan">ICT</span></span>
+                    </a>
+                    <button id="mobile-drawer-close" aria-label="Close menu" class="p-2 text-slate-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div class="py-6 space-y-4 flex-1">
+                    <a href="#courses" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Explore Courses</a>
+                    <a href="#certifications" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Certifications</a>
+                    <a href="#pathways" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Learning Pathways</a>
+                    <a href="#technologies" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Vendor Ecosystem</a>
+                    <a href="#schedules" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Training Schedules</a>
+                    <a href="#corporate" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Corporate Solutions</a>
+                    <a href="#talent" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Careers &amp; Talent Hub</a>
+                    <a href="#learnerships" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">ICT Learnerships</a>
+                    <a href="#exams" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Exam Booking</a>
+                    <a href="#contact" class="mobile-nav-link block text-lg font-medium text-slate-200 hover:text-brand-cyan">Contact &amp; Offices</a>
+                    <a href="#dashboard" class="mobile-nav-link block text-lg font-medium text-brand-cyan hover:underline">Learner Portal</a>
+                    <a href="#admin" class="mobile-nav-link block text-lg font-medium text-slate-400 hover:underline">Admin Console</a>
+                </div>
+                <div class="pt-6 border-t border-slate-800 space-y-3">
+                    <a href="#quote" class="mobile-nav-link block w-full text-center py-3 rounded-xl bg-brand-blue text-white font-semibold">Request Corporate Quote</a>
+                    <a href="#contact" class="mobile-nav-link block w-full text-center py-3 rounded-xl bg-slate-800 text-slate-200 font-semibold">Talk to a Advisor</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="search-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md p-4 sm:p-6 lg:p-20 overflow-y-auto">
+        <div class="max-w-3xl mx-auto bg-navy-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <input id="search-input" type="text" placeholder="Search courses, vendors (e.g. Azure, AWS, CCNA), certifications..." class="w-full bg-transparent text-white placeholder-slate-400 focus:outline-none text-base sm:text-lg">
+                <button id="search-modal-close" class="text-xs text-slate-400 hover:text-white px-2 py-1 rounded bg-slate-800">ESC</button>
+            </div>
+            <div id="search-quick-results" class="p-6 max-h-[60vh] overflow-y-auto divide-y divide-slate-800/60">
+                <div class="text-slate-400 text-sm py-4 text-center">Type at least 2 characters to search across 120+ courses, vendor pathways, and learnerships...</div>
+            </div>
+            <div class="bg-navy-950 p-3 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400">
+                <span>Press <kbd class="px-1.5 py-0.5 bg-slate-800 rounded text-slate-300">Enter</kbd> for comprehensive view</span>
+                <a href="#courses" class="text-brand-cyan hover:underline">Explore Full Catalogue &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN DYNAMIC CONTENT CONTAINER -->
+    <main id="main-content" class="flex-1 w-full" tabIndex="-1">
+        <!-- Views rendered dynamically via Router -->
+    </main>
+
+    <footer class="bg-navy-950 text-slate-300 border-t border-slate-800 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-brand-blue flex items-center justify-center font-bold text-white text-lg">A</div>
+                        <span class="text-xl font-extrabold tracking-tight text-white">APEX<span class="text-brand-cyan">ICT</span></span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed pr-4">
+                        ApexICT is an authorized enterprise tech training provider, certification testing partner, and digital workforce recruitment agency serving ICT professionals, corporate enterprises, and public institutions across Africa and internationally.
+                    </p>
+                    <div class="pt-2 text-xs text-slate-500 space-y-1">
+                        <p>&bull; Pearson VUE &amp; PSI Authorized Test Center</p>
+                        <p>&bull; NQF &amp; MICT SETA Accredited Provider Network</p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Training & Certs -->
+                <div>
+                    <h3 class="text-white font-semibold text-base mb-4">Training &amp; Certs</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#courses" class="hover:text-white transition-colors">Course Directory</a></li>
+                        <li><a href="#certifications" class="hover:text-white transition-colors">Vendor Certifications</a></li>
+                        <li><a href="#pathways" class="hover:text-white transition-colors">Learning Pathways</a></li>
+                        <li><a href="#technologies" class="hover:text-white transition-colors">Technology Directory</a></li>
+                        <li><a href="#schedules" class="hover:text-white transition-colors">Public Schedules</a></li>
+                        <li><a href="#exams" class="hover:text-white transition-colors">Exam Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Enterprise & Talent -->
+                <div>
+                    <h3 class="text-white font-semibold text-base mb-4">Enterprise &amp; Talent</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#corporate" class="hover:text-white transition-colors">Corporate Solutions</a></li>
+                        <li><a href="#talent" class="hover:text-white transition-colors">Talent Recruitment</a></li>
+                        <li><a href="#learnerships" class="hover:text-white transition-colors">ICT Learnerships</a></li>
+                        <li><a href="#quote" class="hover:text-white transition-colors">Request a Quote</a></li>
+                        <li><a href="#dashboard" class="hover:text-white transition-colors">Learner Portal</a></li>
+                        <li><a href="#admin" class="hover:text-white transition-colors">Admin Console</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Corporate Contact -->
+                <div>
+                    <h3 class="text-white font-semibold text-base mb-4">Contact &amp; Support</h3>
+                    <div class="space-y-3 text-sm text-slate-400">
+                        <p class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Enterprise Campus, Tech Park, Sandton &amp; Century City, South Africa
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM3 13a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2z"></path></svg>
+                            enquiries@apexict.example.com
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                            +27 (0) 11 800 9000
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Legal Bar -->
+            <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 ApexICT Enterprise Training &amp; Talent Platform. All rights reserved.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#privacy" class="hover:text-slate-300">Privacy Policy</a>
+                    <a href="#terms" class="hover:text-slate-300">Terms &amp; Conditions</a>
+                    <a href="#accessibility" class="hover:text-slate-300">Accessibility Statement</a>
+                    <a href="#sitemap" class="hover:text-slate-300">Sitemap XML</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-50 bg-navy-950 border-t border-slate-800 text-slate-300 p-4 shadow-2xl transition-transform duration-300 translate-y-full">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+            <p>
+                We use cookies to personalize your learning experience, analyze schedule traffic, and support online exam bookings. Read our <a href="#privacy" class="underline text-brand-cyan">Cookie Policy</a>.
+            </p>
+            <div class="flex items-center gap-3 shrink-0">
+                <button id="cookie-accept" class="px-4 py-2 bg-brand-blue text-white font-medium rounded-lg text-xs hover:bg-blue-600 transition-colors">
+                    Accept All
+                </button>
+                <button id="cookie-decline" class="px-4 py-2 bg-slate-800 text-slate-300 font-medium rounded-lg text-xs hover:bg-slate-700 transition-colors">
+                    Essential Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PLATFORM SCRIPTING & DATA ARCHITECTURE -->
+    <script>
+        
+        // Backend API Integration Configuration Object (Static SPA Architecture)
+        const API_CONFIG = {
+            enabled: false,
+            endpoint: "https://api.example.com/v1",
+            version: "2026.1",
+            note: "Frontend designed for headless integration with enterprise CRMs / LMS endpoints."
+        };
+
+        // Master Application State
+        const APP_STATE = {
+            currentView: 'home',
+            params: {},
+            searchQuery: '',
+            selectedCategory: 'All',
+            selectedVendor: 'All',
+            quoteItems: [],
+            user: {
+                name: 'Thabo Mokoena',
+                email: 't.mokoena@enterprise.co.za',
+                role: 'Learner & Exam Candidate',
+                company: 'Standard Global Tech'
+            }
+        };
+
+        // Master Enterprise ICT Data Store
+        const ICT_DATA = {
+            vendors: [
+                { id: 'microsoft', name: 'Microsoft', icon: 'M', count: 42, tag: 'Gold Partner' },
+                { id: 'aws', name: 'AWS', icon: 'A', count: 28, tag: 'Advanced Tier' },
+                { id: 'cisco', name: 'Cisco', icon: 'C', count: 24, tag: 'Learning Partner' },
+                { id: 'comptia', name: 'CompTIA', icon: 'T', count: 18, tag: 'Authorized' },
+                { id: 'redhat', name: 'Red Hat', icon: 'R', count: 12, tag: 'Enterprise' },
+                { id: 'itil', name: 'ITIL / Axelos', icon: 'I', count: 10, tag: 'ITSM' },
+                { id: 'huawei', name: 'Huawei', icon: 'H', count: 15, tag: 'HALP' },
+                { id: 'vmware', name: 'VMware by Broadcom', icon: 'V', count: 14, tag: 'Authorized' }
+            ],
+
+            courses: [
+                {
+                    id: 'AZ-104',
+                    code: 'AZ-104',
+                    title: 'Microsoft Azure Administrator',
+                    vendor: 'Microsoft',
+                    category: 'Cloud',
+                    level: 'Intermediate',
+                    duration: '4 Days (28 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Sandton', 'Classroom - Cape Town'],
+                    exam: 'Exam AZ-104 (Included Option)',
+                    nextDate: '2026-09-07',
+                    seatsLeft: 4,
+                    summary: 'Master Azure governance, virtual networking, identity management, storage architecture, and resource monitoring for enterprise cloud environments.',
+                    modules: ['Managing Azure Identities & Governance', 'Implementing & Managing Storage', 'Deploying Azure Compute Resources', 'Configuring Virtual Networking', 'Monitoring Azure Infrastructure'],
+                    prerequisites: 'Understanding of virtualization, networking fundamentals, and OS administration.'
+                },
+                {
+                    id: 'AZ-305',
+                    code: 'AZ-305',
+                    title: 'Designing Microsoft Azure Infrastructure Solutions',
+                    vendor: 'Microsoft',
+                    category: 'Cloud',
+                    level: 'Advanced',
+                    duration: '4 Days (28 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Sandton'],
+                    exam: 'Exam AZ-305',
+                    nextDate: '2026-09-21',
+                    seatsLeft: 6,
+                    summary: 'Design identity, governance, monitoring, data storage, business continuity, and infrastructure solutions across hybrid enterprise environments.',
+                    modules: ['Design Identity, Governance & Monitoring', 'Design Data Storage Solutions', 'Design Business Continuity Solutions', 'Design Infrastructure Solutions'],
+                    prerequisites: 'AZ-104 Microsoft Azure Administrator certification or equivalent experience.'
+                },
+                {
+                    id: 'AWS-SAA',
+                    code: 'AWS-SAA-C03',
+                    title: 'AWS Certified Solutions Architect – Associate',
+                    vendor: 'AWS',
+                    category: 'Cloud',
+                    level: 'Intermediate',
+                    duration: '3 Days (21 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Cape Town', 'Hybrid'],
+                    exam: 'AWS Solutions Architect Associate Exam',
+                    nextDate: '2026-09-14',
+                    seatsLeft: 2,
+                    summary: 'Learn to design resilient, high-performing, secure, and cost-optimized architectures on Amazon Web Services using industry best practices.',
+                    modules: ['Designing Resilient Architectures', 'Designing High-Performing Architectures', 'Designing Secure Applications', 'Designing Cost-Optimized Architectures'],
+                    prerequisites: 'Basic knowledge of distributed systems and cloud computing concepts.'
+                },
+                {
+                    id: 'CCNA-200-301',
+                    code: 'CCNA 200-301',
+                    title: 'Implementing and Administering Cisco Solutions',
+                    vendor: 'Cisco',
+                    category: 'Networking',
+                    level: 'Associate',
+                    duration: '5 Days (35 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Sandton'],
+                    exam: 'Cisco CCNA 200-301 Exam',
+                    nextDate: '2026-09-14',
+                    seatsLeft: 5,
+                    summary: 'Comprehensive foundation covering network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation.',
+                    modules: ['Network Fundamentals & Routing', 'Network Access & VLANs', 'IP Connectivity & Services', 'Security Fundamentals', 'Automation & Programmability'],
+                    prerequisites: 'Basic computer literacy and IP networking familiarity.'
+                },
+                {
+                    id: 'SY0-701',
+                    code: 'SY0-701',
+                    title: 'CompTIA Security+ Certification',
+                    vendor: 'CompTIA',
+                    category: 'Cybersecurity',
+                    level: 'Intermediate',
+                    duration: '5 Days (35 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Cape Town', 'On-Site'],
+                    exam: 'CompTIA Security+ Exam Voucher',
+                    nextDate: '2026-09-07',
+                    seatsLeft: 8,
+                    summary: 'Gain baseline cybersecurity skills to evaluate security posture, secure hybrid environments, and comply with threat intelligence standards.',
+                    modules: ['General Security Concepts', 'Threats, Vulnerabilities & Mitigations', 'Security Architecture', 'Security Operations', 'Security Program Management'],
+                    prerequisites: 'CompTIA Network+ or 2 years IT administration experience recommended.'
+                },
+                {
+                    id: 'RHCSA-EX200',
+                    code: 'RH124/RH134',
+                    title: 'Red Hat System Administration (RHCSA Fast Track)',
+                    vendor: 'Red Hat',
+                    category: 'DevOps',
+                    level: 'Intermediate',
+                    duration: '5 Days (35 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Sandton'],
+                    exam: 'EX200 RHCSA Exam',
+                    nextDate: '2026-09-28',
+                    seatsLeft: 3,
+                    summary: 'Core Linux system administration skills for Red Hat Enterprise Linux including storage configuration, security controls, and shell script automation.',
+                    modules: ['Managing Files & Command Line', 'Managing Users & Security', 'Storage & File Systems', 'Deploying Systems & Containerization'],
+                    prerequisites: 'Prior Linux user experience or command-line familiarity.'
+                },
+                {
+                    id: 'ITIL4-F',
+                    code: 'ITIL4-FOUNDATION',
+                    title: 'ITIL® 4 Foundation Service Management',
+                    vendor: 'ITIL / Axelos',
+                    category: 'ITSM',
+                    level: 'Foundation',
+                    duration: '3 Days (21 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Sandton', 'Classroom - Cape Town'],
+                    exam: 'ITIL 4 Foundation Online Exam',
+                    nextDate: '2026-09-21',
+                    seatsLeft: 10,
+                    summary: 'Understand modern IT service management frameworks, Service Value System (SVS), and four dimensions of service management for IT leaders.',
+                    modules: ['Key Concepts of Service Management', 'The 7 Guiding Principles of ITIL', 'Four Dimensions of Service Management', 'ITIL Management Practices'],
+                    prerequisites: 'No formal prerequisites. Designed for all IT practitioners.'
+                },
+                {
+                    id: 'HCIA-DATACOM',
+                    code: 'HCIA-DATACOM',
+                    title: 'Huawei Certified ICT Associate - Datacom',
+                    vendor: 'Huawei',
+                    category: 'Networking',
+                    level: 'Associate',
+                    duration: '5 Days (35 Hours)',
+                    delivery: ['Virtual ILT', 'Classroom - Sandton'],
+                    exam: 'HCIA-Datacom Exam',
+                    nextDate: '2026-10-05',
+                    seatsLeft: 7,
+                    summary: 'Covers routing, switching, WLAN basics, enterprise network security, network management, and Huawei VRP device configuration.',
+                    modules: ['Data Communication & IP Networking Basics', 'Spanning Tree & VLAN Architecture', 'OSPF Dynamic Routing Protocols', 'WLAN Infrastructure & Network Security'],
+                    prerequisites: 'Fundamental knowledge of computer networks.'
+                }
+            ],
+
+            pathways: [
+                {
+                    id: 'path-cloud-architect',
+                    title: 'Enterprise Cloud Solutions Architect',
+                    vendor: 'Microsoft & AWS',
+                    description: 'Structured progression from core cloud administration to enterprise multi-cloud solution architecture.',
+                    nodes: [
+                        { step: 1, title: 'Azure Administrator (AZ-104)', level: 'Intermediate', duration: '4 Days' },
+                        { step: 2, title: 'AWS Solutions Architect Associate', level: 'Intermediate', duration: '3 Days' },
+                        { step: 3, title: 'Azure Architecture Solutions (AZ-305)', level: 'Advanced', duration: '4 Days' },
+                        { step: 4, title: 'Enterprise Cloud Architect Certification', level: 'Expert', duration: 'Capstone' }
+                    ],
+                    careerOutcome: 'Senior Cloud Architect / Cloud Operations Director (Avg. R950k - R1.4M / annum)'
+                },
+                {
+                    id: 'path-cyber-defense',
+                    title: 'Cyber Defense & Threat Intelligence Specialist',
+                    vendor: 'CompTIA & Cisco',
+                    description: 'Progressive mastery from network security foundations to advanced security operations center (SOC) leadership.',
+                    nodes: [
+                        { step: 1, title: 'Cisco CCNA Networking Basics', level: 'Associate', duration: '5 Days' },
+                        { step: 2, title: 'CompTIA Security+ (SY0-701)', level: 'Intermediate', duration: '5 Days' },
+                        { step: 3, title: 'CyberSec First Responder (CFR)', level: 'Advanced', duration: '5 Days' },
+                        { step: 4, title: 'Certified Enterprise Security Leader', level: 'Expert', duration: 'Exam' }
+                    ],
+                    careerOutcome: 'SOC Analyst / Cyber Threat Incident Manager'
+                }
+            ],
+
+            learnerships: [
+                {
+                    id: 'learn-sys-dev',
+                    title: 'National Certificate: Systems Development',
+                    code: 'NQF Level 5 (SAQA ID 48872)',
+                    duration: '12 Months (70% Practical Workplace, 30% Theory)',
+                    stipend: 'Sponsorship / Stipend Structured',
+                    eligibility: 'Grade 12 / Matric with Mathematics & Computer Science. Age 18–35.',
+                    description: 'Covers full-stack software development, database design, modern web frameworks, and Agile team delivery practices.'
+                },
+                {
+                    id: 'learn-tech-supp',
+                    title: 'FET Certificate: Technical Support & Cloud Support',
+                    code: 'NQF Level 4 (SAQA ID 78964)',
+                    duration: '12 Months Workplace Integrated',
+                    stipend: 'Fully Funded Corporate Learnership',
+                    eligibility: 'Matric Certificate with English & Mathematical Literacy.',
+                    description: 'Prepares candidates for helpdesk tier 1-2 support, cloud tenant management, and enterprise desktop administration.'
+                }
+            ],
+
+            jobs: [
+                { id: 'job-1', title: 'Senior Azure Cloud Engineer', company: 'Financial Services Enterprise', location: 'Johannesburg (Hybrid)', type: 'Permanent', level: 'Senior' },
+                { id: 'job-2', title: 'Junior Systems Developer (Graduate)', company: 'Apex Technology Partners', location: 'Cape Town', type: 'Learnership / Graduate', level: 'Entry' },
+                { id: 'job-3', title: 'Cyber Defense SOC Analyst', company: 'Global Telecommunications Group', location: 'Centurion', type: 'Permanent', level: 'Mid-Level' }
+            ],
+
+            articles: [
+                { id: 'art-1', title: 'Navigating the Multi-Cloud Skills Gap in 2026', date: 'August 10, 2026', category: 'Cloud Architecture', excerpt: 'How South African enterprises are building resilient hybrid cloud capabilities through targeted vendor certifications.' },
+                { id: 'art-2', title: 'The Impact of AI Infrastructure on Enterprise Cybersecurity', date: 'August 02, 2026', category: 'Cybersecurity', excerpt: 'Why Security+ and automated SOC response mechanisms are essential for modern financial and healthcare organizations.' }
+            ]
+        };
+
+
+        // Dynamic Router Function
+        function router() {
+            const hash = window.location.hash || '#home';
+            const [viewPath, queryString] = hash.slice(1).split('?');
+            
+            APP_STATE.currentView = viewPath || 'home';
+            
+            // Parse query params
+            APP_STATE.params = {};
+            if (queryString) {
+                const urlParams = new URLSearchParams(queryString);
+                for (let [key, val] of urlParams.entries()) {
+                    APP_STATE.params[key] = val;
+                }
+            }
+
+            // Close mobile drawer if open
+            const drawer = document.getElementById('mobile-drawer');
+            if (drawer) drawer.classList.add('hidden');
+
+            const mainContent = document.getElementById('main-content');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Render view base
+            switch (APP_STATE.currentView) {
+                case 'home':
+                    mainContent.innerHTML = renderHome();
+                    break;
+                case 'courses':
+                    mainContent.innerHTML = renderCourses();
+                    attachCourseFilterListeners();
+                    break;
+                case 'course-detail':
+                    mainContent.innerHTML = renderCourseDetail(APP_STATE.params.id);
+                    break;
+                case 'certifications':
+                    mainContent.innerHTML = renderCertifications();
+                    break;
+                case 'pathways':
+                    mainContent.innerHTML = renderPathways();
+                    break;
+                case 'technologies':
+                    mainContent.innerHTML = renderTechnologies();
+                    break;
+                case 'schedules':
+                    mainContent.innerHTML = renderSchedules();
+                    attachScheduleFilterListeners();
+                    break;
+                case 'corporate':
+                    mainContent.innerHTML = renderCorporate();
+                    break;
+                case 'quote':
+                    mainContent.innerHTML = renderQuote();
+                    attachQuoteFormListener();
+                    break;
+                case 'talent':
+                    mainContent.innerHTML = renderTalent();
+                    break;
+                case 'learnerships':
+                    mainContent.innerHTML = renderLearnerships();
+                    break;
+                case 'exams':
+                    mainContent.innerHTML = renderExams();
+                    break;
+                case 'contact':
+                    mainContent.innerHTML = renderContact();
+                    attachContactFormListener();
+                    break;
+                case 'dashboard':
+                    mainContent.innerHTML = renderDashboard();
+                    break;
+                case 'admin':
+                    mainContent.innerHTML = renderAdmin();
+                    break;
+                case 'search':
+                    mainContent.innerHTML = renderSearchResults(APP_STATE.params.q || '');
+                    break;
+                case 'privacy':
+                case 'terms':
+                case 'accessibility':
+                case 'sitemap':
+                    mainContent.innerHTML = renderLegal(APP_STATE.currentView);
+                    break;
+                default:
+                    mainContent.innerHTML = render404();
+                    break;
+            }
+
+            // Update document title dynamically
+            document.title = `${capitalize(APP_STATE.currentView.replace('-', ' '))} | ApexICT Enterprise Platform`;
+        }
+
+        function renderHome() {
+            return `
+                <!-- Hero Section -->
+                <section class="bg-navy-950 text-white relative overflow-hidden pt-12 pb-24 border-b border-slate-800">
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-blue/20 via-navy-950 to-navy-950 pointer-events-none"></div>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                            
+                            <div class="lg:col-span-7 space-y-6 text-left">
+                                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-brand-cyan">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    2026 Q3 Enterprise Training &amp; Exam Schedule Now Active
+                                </div>
+                                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                                    Build the Skills That Move <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">Technology Forward</span>.
+                                </h1>
+                                <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                                    Authorized vendor training, international IT certifications, structured learnerships, and digital workforce talent recruitment tailored for IT leaders, enterprise teams, and ambitious tech professionals.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="#courses" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-bold shadow-xl shadow-brand-blue/25 transition-all focus-visible-outline text-base">
+                                        Explore Course Catalogue
+                                    </a>
+                                    <a href="#quote" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 font-semibold border border-slate-700 transition-all focus-visible-outline text-base">
+                                        Request Corporate Plan
+                                    </a>
+                                </div>
+                                <!-- Key Metric Trust Strip -->
+                                <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-6">
+                                    <div>
+                                        <div class="text-2xl font-bold text-white">120+</div>
+                                        <div class="text-xs text-slate-400 mt-0.5">Authorized Courses</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-cyan">98.4%</div>
+                                        <div class="text-xs text-slate-400 mt-0.5">Exam Pass Rate</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-white">450+</div>
+                                        <div class="text-xs text-slate-400 mt-0.5">Enterprise Clients</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Visual Banner Card -->
+                            <div class="lg:col-span-5 relative">
+                                <div class="bg-navy-900 border border-slate-800 rounded-3xl p-6 sm:p-8 mega-menu-shadow relative overflow-hidden">
+                                    <div class="flex items-center justify-between mb-6">
+                                        <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Fast-Track Certification</span>
+                                        <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-md border border-emerald-500/20">Guaranteed Dates</span>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="bg-navy-950 p-4 rounded-xl border border-slate-800 hover:border-brand-blue transition-colors group cursor-pointer" onclick="window.location.hash='#course-detail?id=AZ-104'">
+                                            <div class="flex justify-between items-start">
+                                                <div>
+                                                    <span class="text-[10px] font-bold text-slate-400 uppercase">Microsoft Azure</span>
+                                                    <h3 class="text-white font-semibold text-sm group-hover:text-brand-cyan transition-colors">AZ-104: Azure Administrator</h3>
+                                                </div>
+                                                <span class="text-xs font-medium text-slate-400">Sep 07</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-navy-950 p-4 rounded-xl border border-slate-800 hover:border-brand-blue transition-colors group cursor-pointer" onclick="window.location.hash='#course-detail?id=CCNA-200-301'">
+                                            <div class="flex justify-between items-start">
+                                                <div>
+                                                    <span class="text-[10px] font-bold text-slate-400 uppercase">Cisco Networking</span>
+                                                    <h3 class="text-white font-semibold text-sm group-hover:text-brand-cyan transition-colors">CCNA 200-301 Enterprise</h3>
+                                                </div>
+                                                <span class="text-xs font-medium text-slate-400">Sep 14</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-navy-950 p-4 rounded-xl border border-slate-800 hover:border-brand-blue transition-colors group cursor-pointer" onclick="window.location.hash='#course-detail?id=SY0-701'">
+                                            <div class="flex justify-between items-start">
+                                                <div>
+                                                    <span class="text-[10px] font-bold text-slate-400 uppercase">CompTIA Security</span>
+                                                    <h3 class="text-white font-semibold text-sm group-hover:text-brand-cyan transition-colors">Security+ SY0-701 Certification</h3>
+                                                </div>
+                                                <span class="text-xs font-medium text-slate-400">Sep 07</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#schedules" class="mt-6 block text-center py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl transition-colors">
+                                        View Complete Master Schedule &rarr;
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-10 bg-white border-b border-slate-200">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <p class="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">Authorized Vendor &amp; Certification Ecosystem</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
+                            ${ICT_DATA.vendors.map(v => `
+                                <a href="#courses?vendor=${encodeURIComponent(v.name)}" class="p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-brand-blue hover:shadow-md transition-all text-center group">
+                                    <div class="text-lg font-black text-slate-700 group-hover:text-brand-blue">${v.name}</div>
+                                    <span class="text-[10px] text-slate-400 font-medium block mt-0.5">${v.count} Courses</span>
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Course Discovery Preview -->
+                <section class="py-16 bg-slate-50 border-b border-slate-200">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                            <div>
+                                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider block mb-1">Curated Programs</span>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-950 tracking-tight">High-Demand Enterprise Courses</h2>
+                            </div>
+                            <a href="#courses" class="text-sm font-bold text-brand-blue hover:text-blue-700 flex items-center gap-1">
+                                Explore All Courses &rarr;
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            ${ICT_DATA.courses.slice(0, 6).map(c => renderCourseCardHTML(c)).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Visual Learning Pathways Highlight -->
+                <section class="py-16 bg-navy-950 text-white">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center max-w-3xl mx-auto mb-12">
+                            <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider block mb-2">Structured Career Progression</span>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Clear Certification Pathways</h2>
+                            <p class="text-slate-400 text-sm sm:text-base mt-2">Eliminate guesswork. Follow industry-validated course sequences designed to take you from foundational understanding to enterprise expert capability.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            ${ICT_DATA.pathways.map(p => `
+                                <div class="bg-navy-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition-all">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">${p.vendor} Pathway</span>
+                                            <h3 class="text-xl font-bold text-white mt-1">${p.title}</h3>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-slate-300 mb-6">${p.description}</p>
+                                    
+                                    <!-- Nodes steps -->
+                                    <div class="space-y-3 mb-6">
+                                        ${p.nodes.map(n => `
+                                            <div class="flex items-center gap-3 p-3 bg-navy-950 rounded-xl border border-slate-800">
+                                                <div class="w-7 h-7 rounded-full bg-brand-blue/20 text-brand-cyan font-bold text-xs flex items-center justify-center shrink-0">
+                                                    ${n.step}
+                                                </div>
+                                                <div class="flex-1 min-w-0">
+                                                    <div class="text-sm font-semibold text-white truncate">${n.title}</div>
+                                                    <div class="text-[11px] text-slate-400">${n.level} &bull; ${n.duration}</div>
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                    
+                                    <div class="pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
+                                        <span class="text-slate-400">Career Goal: <strong class="text-white">${p.careerOutcome}</strong></span>
+                                        <a href="#pathways" class="text-brand-cyan hover:underline font-semibold">View Detail &rarr;</a>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Enterprise Capability Section -->
+                <section class="py-16 bg-white border-b border-slate-200">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="space-y-6">
+                                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">Corporate Workforce Transformation</span>
+                                <h2 class="text-3xl font-extrabold text-navy-950 tracking-tight">Tailored Training for IT Organizations &amp; L&amp;D Teams</h2>
+                                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                                    We assist HR executives, CTOs, and Training Managers in closing critical skill gaps through custom curricula, on-site instructor delivery, private cloud lab environments, and comprehensive skills assessment reporting.
+                                </p>
+                                <ul class="space-y-3 text-sm text-slate-700">
+                                    <li class="flex items-center gap-3">
+                                        <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        Customized Learning Needs Analysis (LNA) &amp; Skill Audit
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        On-Site, Virtual ILT, or Dedicated Campus Facilities
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        Post-Training Exam Voucher Bundles &amp; Pass Assurance
+                                    </li>
+                                </ul>
+                                <div class="pt-2">
+                                    <a href="#corporate" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-navy-950 hover:bg-navy-900 text-white font-semibold text-sm transition-all">
+                                        Request Corporate Proposal &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bg-slate-100 rounded-3xl p-8 border border-slate-200 space-y-6">
+                                <h3 class="text-lg font-bold text-navy-950">Talent &amp; Learnerships Ecosystem</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                    Connect qualified IT candidates directly with employers. We manage end-to-end MICT SETA accredited learnerships, graduate placement programs, and IT candidate recruitment.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4 pt-2">
+                                    <a href="#learnerships" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-brand-blue transition-colors block text-left">
+                                        <div class="font-bold text-navy-950 text-sm">Learnership Programs</div>
+                                        <span class="text-xs text-slate-500">NQF Level 4 - 6 Qualifications</span>
+                                    </a>
+                                    <a href="#talent" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-brand-blue transition-colors block text-left">
+                                        <div class="font-bold text-navy-950 text-sm">Hiring &amp; Recruitment</div>
+                                        <span class="text-xs text-slate-500">Pre-screened Certified IT Candidates</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderCourses() {
+            const categoryFilter = APP_STATE.params.category || 'All';
+            const vendorFilter = APP_STATE.params.vendor || 'All';
+
+            let filteredCourses = ICT_DATA.courses.filter(c => {
+                const matchCategory = categoryFilter === 'All' || c.category === categoryFilter;
+                const matchVendor = vendorFilter === 'All' || c.vendor === vendorFilter;
+                return matchCategory && matchVendor;
+            });
+
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Authorized Training Catalogue</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Explore ICT Courses &amp; Certifications</h1>
+                        <p class="text-slate-300 text-sm mt-2 max-w-2xl">Filter by technology vendor, course domain, level, or delivery format to find guaranteed public dates.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        
+                        <!-- Filter Sidebar -->
+                        <div class="w-full lg:w-64 shrink-0 space-y-6">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                                <div>
+                                    <h3 class="text-xs font-bold text-navy-950 uppercase tracking-wider mb-3">Domain Category</h3>
+                                    <div class="space-y-1 text-xs">
+                                        ${['All', 'Cloud', 'Networking', 'Cybersecurity', 'DevOps', 'ITSM'].map(cat => `
+                                            <button onclick="window.location.hash='#courses?category=${cat}&vendor=${vendorFilter}'" class="w-full text-left px-3 py-2 rounded-lg ${categoryFilter === cat ? 'bg-brand-blue text-white font-bold' : 'text-slate-600 hover:bg-slate-100'} transition-colors">
+                                                ${cat}
+                                            </button>
+                                        `).join('')}
+                                    </div>
+                                </div>
+
+                                <div class="pt-4 border-t border-slate-200">
+                                    <h3 class="text-xs font-bold text-navy-950 uppercase tracking-wider mb-3">Vendor Partner</h3>
+                                    <div class="space-y-1 text-xs">
+                                        <button onclick="window.location.hash='#courses?category=${categoryFilter}&vendor=All'" class="w-full text-left px-3 py-2 rounded-lg ${vendorFilter === 'All' ? 'bg-brand-blue text-white font-bold' : 'text-slate-600 hover:bg-slate-100'} transition-colors">
+                                            All Vendors
+                                        </button>
+                                        ${ICT_DATA.vendors.map(v => `
+                                            <button onclick="window.location.hash='#courses?category=${categoryFilter}&vendor=${encodeURIComponent(v.name)}'" class="w-full text-left px-3 py-2 rounded-lg ${vendorFilter === v.name ? 'bg-brand-blue text-white font-bold' : 'text-slate-600 hover:bg-slate-100'} transition-colors">
+                                                ${v.name}
+                                            </button>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Results Grid -->
+                        <div class="flex-1 space-y-6">
+                            <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-200 text-xs text-slate-600">
+                                <span>Showing <strong>${filteredCourses.length}</strong> available courses</span>
+                                <a href="#courses" class="text-brand-blue hover:underline">Reset Filters</a>
+                            </div>
+
+                            ${filteredCourses.length === 0 ? `
+                                <div class="bg-white p-12 text-center rounded-2xl border border-slate-200">
+                                    <h3 class="text-lg font-bold text-slate-800">No courses match selected filters</h3>
+                                    <p class="text-slate-500 text-xs mt-1">Try resetting vendor or domain selection.</p>
+                                    <a href="#courses" class="mt-4 inline-block px-4 py-2 bg-brand-blue text-white text-xs font-semibold rounded-lg">Reset All Filters</a>
+                                </div>
+                            ` : `
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    ${filteredCourses.map(c => renderCourseCardHTML(c)).join('')}
+                                </div>
+                            `}
+                        </div>
+
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCourseCardHTML(course) {
+            return `
+                <div class="bg-white rounded-2xl border border-slate-200 hover:border-brand-blue hover:shadow-lg transition-all flex flex-col justify-between overflow-hidden">
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-[11px] font-bold rounded-md uppercase tracking-wider">${course.vendor}</span>
+                            <span class="text-xs font-medium text-slate-500">${course.code}</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-extrabold text-navy-950 group-hover:text-brand-blue transition-colors">
+                                <a href="#course-detail?id=${course.id}">${course.title}</a>
+                            </h3>
+                            <p class="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed">${course.summary}</p>
+                        </div>
+                        <div class="pt-2 flex flex-wrap gap-2 text-[11px] text-slate-500">
+                            <span class="px-2 py-0.5 bg-slate-50 border border-slate-200 rounded">${course.level}</span>
+                            <span class="px-2 py-0.5 bg-slate-50 border border-slate-200 rounded">${course.duration}</span>
+                            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded font-semibold">${course.nextDate}</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-between">
+                        <a href="#course-detail?id=${course.id}" class="text-xs font-bold text-navy-950 hover:text-brand-blue">
+                            View Course Outline &rarr;
+                        </a>
+                        <a href="#quote" class="px-3 py-1.5 bg-brand-blue text-white rounded-lg text-xs font-semibold hover:bg-blue-600 transition-colors">
+                            Enquire
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCourseDetail(courseId) {
+            const course = ICT_DATA.courses.find(c => c.id === courseId) || ICT_DATA.courses[0];
+
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex items-center gap-2 text-xs text-slate-400 mb-4">
+                            <a href="#courses" class="hover:underline">Courses</a> &gt;
+                            <span>${course.vendor}</span> &gt;
+                            <span class="text-white font-medium">${course.code}</span>
+                        </div>
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                            <div class="space-y-3 max-w-3xl">
+                                <span class="px-3 py-1 bg-brand-blue/20 text-brand-cyan font-bold text-xs rounded-full border border-brand-blue/30">${course.vendor} Authorized Curriculum</span>
+                                <h1 class="text-3xl sm:text-4xl font-extrabold text-white">${course.title}</h1>
+                                <p class="text-slate-300 text-sm leading-relaxed">${course.summary}</p>
+                            </div>
+                            <div class="shrink-0 bg-navy-900 p-6 rounded-2xl border border-slate-800 space-y-4">
+                                <div>
+                                    <div class="text-xs text-slate-400">Guaranteed Next Date</div>
+                                    <div class="text-xl font-bold text-emerald-400">${course.nextDate}</div>
+                                </div>
+                                <a href="#quote" class="block w-full text-center px-6 py-3 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-bold text-sm shadow-lg shadow-brand-blue/20 transition-all">
+                                    Request Course Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div class="lg:col-span-2 space-y-8">
+                            
+                            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                                <h2 class="text-xl font-bold text-navy-950">Course Overview &amp; Learning Objectives</h2>
+                                <p class="text-sm text-slate-600 leading-relaxed">${course.summary}</p>
+                                <div class="pt-4 border-t border-slate-100">
+                                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Prerequisites</h3>
+                                    <p class="text-xs text-slate-700">${course.prerequisites}</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                                <h2 class="text-xl font-bold text-navy-950">Curriculum Modules</h2>
+                                <div class="space-y-3">
+                                    ${course.modules.map((m, idx) => `
+                                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-4">
+                                            <span class="w-6 h-6 rounded-full bg-navy-950 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">${idx + 1}</span>
+                                            <span class="text-sm font-semibold text-slate-800">${m}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Sidebar -->
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                                <h3 class="text-sm font-bold text-navy-950 uppercase tracking-wider">Course Metadata</h3>
+                                <ul class="space-y-3 text-xs divide-y divide-slate-100">
+                                    <li class="pt-2 flex justify-between"><span class="text-slate-500">Course Code:</span> <strong class="text-slate-800">${course.code}</strong></li>
+                                    <li class="pt-2 flex justify-between"><span class="text-slate-500">Duration:</span> <strong class="text-slate-800">${course.duration}</strong></li>
+                                    <li class="pt-2 flex justify-between"><span class="text-slate-500">Skill Level:</span> <strong class="text-slate-800">${course.level}</strong></li>
+                                    <li class="pt-2 flex justify-between"><span class="text-slate-500">Certification:</span> <strong class="text-brand-blue">${course.exam}</strong></li>
+                                </ul>
+                                <button onclick="triggerDownloadOutline('${course.code}')" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-navy-950 text-xs font-semibold rounded-xl border border-slate-200 transition-colors">
+                                    Download Full Syllabus (PDF)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCertifications() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">International Credentials</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Vendor Certifications &amp; Exam Services</h1>
+                        <p class="text-slate-300 text-sm mt-2 max-w-2xl">Validate expertise with credentials from Microsoft, AWS, Cisco, CompTIA, Red Hat, and ITIL.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${ICT_DATA.courses.map(c => `
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                                <span class="px-2.5 py-1 bg-brand-blue/10 text-brand-blue text-[11px] font-bold rounded-md">${c.vendor}</span>
+                                <h3 class="text-lg font-bold text-navy-950">${c.exam}</h3>
+                                <p class="text-xs text-slate-600">Aligned Course: <a href="#course-detail?id=${c.id}" class="text-brand-blue font-semibold hover:underline">${c.title}</a></p>
+                                <a href="#schedules" class="inline-block px-4 py-2 bg-slate-900 text-white text-xs font-semibold rounded-lg hover:bg-slate-800 transition-colors">
+                                    Schedule Exam Prep &rarr;
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPathways() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Career Roadmap Engine</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Industry Learning Pathways</h1>
+                        <p class="text-slate-300 text-sm mt-2 max-w-2xl">Step-by-step career progression models designed for enterprise roles.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+                    ${ICT_DATA.pathways.map(p => `
+                        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                            <div>
+                                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">${p.vendor} Ecosystem</span>
+                                <h2 class="text-2xl font-extrabold text-navy-950 mt-1">${p.title}</h2>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-1">${p.description}</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+                                ${p.nodes.map(n => `
+                                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 relative">
+                                        <div class="w-8 h-8 rounded-full bg-navy-950 text-white font-bold text-xs flex items-center justify-center">
+                                            ${n.step}
+                                        </div>
+                                        <h3 class="text-sm font-bold text-navy-950">${n.title}</h3>
+                                        <div class="text-[11px] text-slate-500">${n.level} &bull; ${n.duration}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+
+                            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 text-xs text-emerald-900 font-medium">
+                                Target Career Capability: <strong>${p.careerOutcome}</strong>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderTechnologies() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Vendor Ecosystem</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Technology &amp; Vendor Directory</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        ${ICT_DATA.vendors.map(v => `
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-brand-blue transition-colors space-y-3">
+                                <div class="w-12 h-12 rounded-xl bg-slate-900 text-white font-black text-xl flex items-center justify-center">${v.icon}</div>
+                                <h3 class="text-lg font-bold text-navy-950">${v.name}</h3>
+                                <p class="text-xs text-slate-500">${v.tag} &bull; ${v.count} Courses Available</p>
+                                <a href="#courses?vendor=${encodeURIComponent(v.name)}" class="inline-block text-xs font-bold text-brand-blue hover:underline">
+                                    Browse ${v.name} Courses &rarr;
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderSchedules() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Public &amp; Virtual Batches</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Guaranteed Training Schedules</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs sm:text-sm">
+                                <thead class="bg-slate-50 border-b border-slate-200 text-slate-700 uppercase font-semibold">
+                                    <tr>
+                                        <th class="p-4">Course Name &amp; Code</th>
+                                        <th class="p-4">Vendor</th>
+                                        <th class="p-4">Start Date</th>
+                                        <th class="p-4">Duration</th>
+                                        <th class="p-4">Delivery Mode</th>
+                                        <th class="p-4">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200 text-slate-800">
+                                    ${ICT_DATA.courses.map(c => `
+                                        <tr class="hover:bg-slate-50/80 transition-colors">
+                                            <td class="p-4">
+                                                <div class="font-bold text-navy-950">${c.title}</div>
+                                                <span class="text-xs text-slate-500">${c.code}</span>
+                                            </td>
+                                            <td class="p-4 font-semibold text-slate-600">${c.vendor}</td>
+                                            <td class="p-4 font-bold text-emerald-600">${c.nextDate}</td>
+                                            <td class="p-4 text-slate-600">${c.duration}</td>
+                                            <td class="p-4 text-slate-600">${c.delivery.join(', ')}</td>
+                                            <td class="p-4">
+                                                <a href="#quote" class="px-3 py-1.5 bg-brand-blue text-white rounded-lg text-xs font-semibold hover:bg-blue-600">Book Seat</a>
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCorporate() {
+            return `
+                <div class="bg-navy-950 text-white py-16 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Enterprise Capability</span>
+                        <h1 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Corporate Workforce Transformation</h1>
+                        <p class="text-slate-300 text-base mt-4 leading-relaxed">
+                            Custom learning pathways, skills audit assessments, dedicated enterprise cohorts, and vendor certification vouchers for organizations across all sectors.
+                        </p>
+                        <div class="mt-8 flex justify-center gap-4">
+                            <a href="#quote" class="px-6 py-3 bg-brand-blue text-white font-bold rounded-xl shadow-lg hover:bg-blue-600">Request Corporate Quote</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderQuote() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Enquiry &amp; Proposal Request</span>
+                        <h1 class="text-3xl font-extrabold text-white mt-1">Request a Custom Training Quote</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <form id="quote-form" class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Full Name *</label>
+                                <input required type="text" id="q-name" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Work Email *</label>
+                                <input required type="email" id="q-email" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Company / Organization</label>
+                                <input type="text" id="q-company" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Estimated Learners</label>
+                                <select id="q-learners" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue">
+                                    <option>1 Learner (Individual)</option>
+                                    <option>2 - 5 Learners</option>
+                                    <option>6 - 20 Learners (Private Team Batch)</option>
+                                    <option>20+ Enterprise Cohort</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Training Requirement Details *</label>
+                            <textarea required id="q-details" rows="4" placeholder="Specify course topics, vendor certifications, or timeframe requirements..." class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 bg-brand-blue hover:bg-blue-600 text-white font-bold rounded-xl shadow-lg transition-colors text-sm">
+                            Submit Quote Request
+                        </button>
+                    </form>
+                </div>
+            `;
+        }
+
+        function renderTalent() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Careers &amp; ICT Placement</span>
+                        <h1 class="text-3xl font-extrabold text-white mt-1">IT Talent Recruitment &amp; Placement</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                        <h2 class="text-xl font-bold text-navy-950">Featured IT Vacancies</h2>
+                        <div class="space-y-4">
+                            ${ICT_DATA.jobs.map(j => `
+                                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex justify-between items-center">
+                                    <div>
+                                        <h3 class="font-bold text-navy-950 text-sm">${j.title}</h3>
+                                        <p class="text-xs text-slate-500">${j.company} &bull; ${j.location}</p>
+                                    </div>
+                                    <a href="#contact" class="px-4 py-2 bg-navy-950 text-white text-xs font-semibold rounded-lg hover:bg-navy-900">Apply Now</a>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderLearnerships() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Youth &amp; Graduate Skills</span>
+                        <h1 class="text-3xl font-extrabold text-white mt-1">NQF Accredited ICT Learnerships</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
+                    ${ICT_DATA.learnerships.map(l => `
+                        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+                            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-md">${l.code}</span>
+                            <h2 class="text-2xl font-bold text-navy-950">${l.title}</h2>
+                            <p class="text-xs text-slate-600 leading-relaxed">${l.description}</p>
+                            <div class="text-xs text-slate-500">Eligibility: <strong>${l.eligibility}</strong></div>
+                            <a href="#quote" class="inline-block px-5 py-2.5 bg-brand-blue text-white text-xs font-bold rounded-xl">Register Interest</a>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderExams() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Pearson VUE &amp; PSI Authorized</span>
+                        <h1 class="text-3xl font-extrabold text-white mt-1">International Certification Exam Centre</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                        <h2 class="text-xl font-bold text-navy-950">Exam Regulations &amp; Voucher Purchasing</h2>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            ApexICT operates secure, proctored testing facilities in Sandton and Cape Town, as well as providing exam vouchers for online proctored testing at home or office.
+                        </p>
+                        <a href="#contact" class="inline-block px-6 py-3 bg-navy-950 text-white text-xs font-bold rounded-xl">Book Exam Seat &rarr;</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderContact() {
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Get In Touch</span>
+                        <h1 class="text-3xl font-extrabold text-white mt-1">Contact Our Training Advisors</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <form id="contact-form" class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">First Name *</label>
+                                <input required type="text" id="c-fname" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Surname *</label>
+                                <input required type="text" id="c-lname" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Email Address *</label>
+                            <input required type="email" id="c-email" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Message *</label>
+                            <textarea required id="c-msg" rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 bg-brand-blue text-white font-bold rounded-xl shadow-lg text-sm">Send Message</button>
+                    </form>
+                </div>
+            `;
+        }
+
+        function renderDashboard() {
+            return `
+                <div class="bg-navy-950 text-white py-10 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Learner Portal</span>
+                            <h1 class="text-2xl font-bold text-white mt-1">Welcome back, ${APP_STATE.user.name}</h1>
+                        </div>
+                        <span class="px-3 py-1 bg-slate-800 text-xs font-medium rounded-lg">${APP_STATE.user.company}</span>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-bold text-slate-400 uppercase">Enrolled Batches</div>
+                            <div class="text-3xl font-extrabold text-navy-950 mt-2">1 Active</div>
+                            <span class="text-xs text-brand-blue mt-1 block">AZ-104 Azure Administrator</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-bold text-slate-400 uppercase">Exam Vouchers</div>
+                            <div class="text-3xl font-extrabold text-emerald-600 mt-2">1 Ready</div>
+                            <span class="text-xs text-slate-500 mt-1 block">Valid through Dec 2026</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="text-xs font-bold text-slate-400 uppercase">Certificates Earned</div>
+                            <div class="text-3xl font-extrabold text-navy-950 mt-2">2 Verified</div>
+                            <a href="#dashboard" class="text-xs text-brand-blue underline mt-1 block">Download Badge PDF</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAdmin() {
+            return `
+                <div class="bg-navy-950 text-white py-10 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">System Management</span>
+                        <h1 class="text-2xl font-bold text-white mt-1">Admin Dashboard (Demo UI)</h1>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
+                    <div class="p-4 bg-amber-50 border border-amber-200 text-amber-900 rounded-xl text-xs font-medium">
+                        Notice: Client-side prototype interface. Security rules and role-based permissions must be enforced by backend API endpoint.
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200"><div class="text-xs text-slate-500">Active Courses</div><div class="text-2xl font-bold mt-1">120</div></div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200"><div class="text-xs text-slate-500">Quotes Pending</div><div class="text-2xl font-bold mt-1 text-brand-blue">14</div></div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200"><div class="text-xs text-slate-500">Learners Enrolled</div><div class="text-2xl font-bold mt-1">1,420</div></div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200"><div class="text-xs text-slate-500">Placement Rate</div><div class="text-2xl font-bold mt-1 text-emerald-600">92%</div></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderSearchResults(query) {
+            const q = query.toLowerCase().trim();
+            const results = ICT_DATA.courses.filter(c => 
+                c.title.toLowerCase().includes(q) || 
+                c.vendor.toLowerCase().includes(q) || 
+                c.code.toLowerCase().includes(q) ||
+                c.category.toLowerCase().includes(q)
+            );
+
+            return `
+                <div class="bg-navy-950 text-white py-12 border-b border-slate-800">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="text-xs font-semibold text-brand-cyan uppercase tracking-wider">Search Results</span>
+                        <h1 class="text-3xl font-extrabold text-white mt-1">Query: "${escapeHTML(query)}"</h1>
+                        <p class="text-xs text-slate-400 mt-1">Found ${results.length} matching curriculum entities</p>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        ${results.map(c => renderCourseCardHTML(c)).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderLegal(type) {
+            return `
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-6">
+                    <h1 class="text-3xl font-extrabold text-navy-950">${capitalize(type)}</h1>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        ApexICT is committed to enterprise compliance, data privacy, and accessible learning delivery. All vendor trademarks belong to their respective owners.
+                    </p>
+                </div>
+            `;
+        }
+
+        function render404() {
+            return `
+                <div class="max-w-xl mx-auto text-center py-24 space-y-4">
+                    <h1 class="text-4xl font-extrabold text-navy-950">404 - Page Not Found</h1>
+                    <p class="text-sm text-slate-600">The requested view does not exist or has been relocated.</p>
+                    <a href="#home" class="inline-block px-6 py-3 bg-brand-blue text-white rounded-xl font-bold text-xs">Return to Homepage</a>
+                </div>
+            `;
+        }
+
+        function attachCourseFilterListeners() {}
+        function attachScheduleFilterListeners() {}
+
+        function attachQuoteFormListener() {
+            const form = document.getElementById('quote-form');
+            if (!form) return;
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Quote enquiry submitted successfully! A training advisor will contact you shortly.', 'success');
+                form.reset();
+            });
+        }
+
+        function attachContactFormListener() {
+            const form = document.getElementById('contact-form');
+            if (!form) return;
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Thank you! Your message has been routed to our corporate support team.', 'success');
+                form.reset();
+            });
+        }
+
+        function triggerDownloadOutline(code) {
+            showToast(`Generating course syllabus PDF for ${code}...`, 'info');
+        }
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+            const toast = document.createElement('div');
+            toast.className = `p-4 rounded-xl shadow-xl border text-xs font-semibold text-white pointer-events-auto transition-all transform translate-y-2 ${type === 'success' ? 'bg-emerald-600 border-emerald-500' : 'bg-navy-900 border-slate-700'}`;
+            toast.innerText = message;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Global Event Setup & Initialization
+        window.addEventListener('hashchange', router);
+        window.addEventListener('DOMContentLoaded', () => {
+            router();
+
+            // Mobile menu toggles
+            const btnOpen = document.getElementById('mobile-menu-toggle');
+            const btnClose = document.getElementById('mobile-drawer-close');
+            const drawer = document.getElementById('mobile-drawer');
+
+            if (btnOpen && drawer) btnOpen.addEventListener('click', () => drawer.classList.remove('hidden'));
+            if (btnClose && drawer) btnClose.addEventListener('click', () => drawer.classList.add('hidden'));
+
+            // Search modal triggers
+            const searchTrigger = document.getElementById('search-trigger');
+            const searchModal = document.getElementById('search-modal');
+            const searchClose = document.getElementById('search-modal-close');
+            const searchInput = document.getElementById('search-input');
+
+            if (searchTrigger && searchModal) {
+                searchTrigger.addEventListener('click', () => {
+                    searchModal.classList.remove('hidden');
+                    if (searchInput) searchInput.focus();
+                });
+            }
+
+            if (searchClose && searchModal) {
+                searchClose.addEventListener('click', () => searchModal.classList.add('hidden'));
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        searchModal.classList.add('hidden');
+                        window.location.hash = `#search?q=${encodeURIComponent(searchInput.value)}`;
+                    }
+                });
+            }
+
+            // Cookie banner setup
+            const cookieBanner = document.getElementById('cookie-banner');
+            if (cookieBanner) {
+                setTimeout(() => cookieBanner.classList.remove('translate-y-full'), 1000);
+                document.getElementById('cookie-accept')?.addEventListener('click', () => cookieBanner.classList.add('translate-y-full'));
+                document.getElementById('cookie-decline')?.addEventListener('click', () => cookieBanner.classList.add('translate-y-full'));
+            }
+        });
+    </script>
+</body>
+</html>
